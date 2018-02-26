@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -20,6 +21,15 @@ public class LoginServlet extends HttpServlet {
 
         String name = request.getParameter("name");
         String password = request.getParameter("password");
+        Enumeration enu=request.getParameterNames();
+
+        while(enu.hasMoreElements())     {
+            String parName=(String)enu.nextElement();
+            System.out.println(parName);
+        }
+
+        String[] paraValues = request.getParameterValues("name");
+
 
         System.out.println("浏览器发出请求时的完整URL，包括协议 主机名 端口(如果有): " + request.getRequestURL());
         System.out.println("浏览器发出请求的资源名部分，去掉了协议和主机名: " + request.getRequestURI());

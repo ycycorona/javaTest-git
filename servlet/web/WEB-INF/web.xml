@@ -37,6 +37,7 @@
     <servlet>
         <servlet-name>toRegisterServletPage</servlet-name>
         <servlet-class>toRegisterServletPage</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
