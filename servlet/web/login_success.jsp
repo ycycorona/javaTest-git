@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String userName = request.getParameter("name");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,9 @@
 <body>
 
 <div style="color:green">login success</div>
-<div></div>
+<div>
+    hello <%=userName%>
+</div>
 
 </body>
 </html>
